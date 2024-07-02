@@ -1,5 +1,3 @@
-# app.py
-
 from flask import Flask, render_template, request, redirect, url_for
 from pony.orm import db_session, select
 from models import db, Roupa
