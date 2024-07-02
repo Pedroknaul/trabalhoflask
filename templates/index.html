@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventário de Roupas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Inventário de Roupas</h1>
+    <a href="{{ url_for('adicionar_roupa') }}">Adicionar Nova Roupa</a>
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Categoria</th>
+                <th>Tamanho</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for roupa in roupas %}
+                <tr>
+                    <td>{{ roupa.nome }}</td>
+                    <td>{{ roupa.categoria }}</td>
+                    <td>{{ roupa.tamanho }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

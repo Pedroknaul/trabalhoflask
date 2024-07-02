@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Roupa</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Adicionar Roupa</h1>
+    <form action="{{ url_for('adicionar_roupa') }}" method="post">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required><br>
+        
+        <label for="categoria">Categoria:</label>
+        <input type="text" id="categoria" name="categoria" required><br>
+        
+        <label for="tamanho">Tamanho:</label>
+        <input type="text" id="tamanho" name="tamanho" required><br>
+        
+        <input type="submit" value="Adicionar Roupa">
+    </form>
+    <br>
+    <a href="{{ url_for('index') }}">Voltar para o Inventário</a>
+</body>
+</html>
